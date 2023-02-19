@@ -8,17 +8,17 @@ type SearchInputProps = {
 
 const SearchInput: React.FC<SearchInputProps> = () => {
     return (
-        <Flex flexGrow={1} mr={2} alignItems="center">
+        <Flex flexGrow={1} mr={2} alignItems='center'>
             <InputGroup>
                 <InputLeftElement
-                    pointerEvents="none"
-                    color="gray.400"
+                    pointerEvents='none'
+                    color='gray.400'
                     // eslint-disable-next-line react/no-children-prop
-                    children={<SearchIcon color="gray.400" mb={2} />}
+                    children={<SearchIcon color='gray.400' mb={2} />}
                 />
                 <Input
-                    placeholder="Search Reddit"
-                    fontSize="10pt"
+                    placeholder='Search Reddit'
+                    fontSize='10pt'
                     _placeholder={{ color: 'gray.500' }}
                     _hover={{
                         bg: 'white',
@@ -30,8 +30,8 @@ const SearchInput: React.FC<SearchInputProps> = () => {
                         border: '1px solid',
                         borderColor: 'blue.500',
                     }}
-                    height="34px"
-                    bg="gray.50"
+                    height='34px'
+                    bg='gray.50'
                 />
             </InputGroup>
         </Flex>

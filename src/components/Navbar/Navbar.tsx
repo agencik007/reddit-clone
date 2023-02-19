@@ -8,19 +8,19 @@ const Navbar: React.FC = () => {
     return (
         <Flex
             className={openSans.className}
-            bg="white"
-            height="44px"
-            padding="6px 12px"
+            bg='white'
+            height='44px'
+            padding='6px 12px'
         >
-            <Flex align="center">
+            <Flex align='center'>
                 <Image
-                    src="/images/redditFace.svg"
-                    alt="reddit logo"
+                    src='/images/redditFace.svg'
+                    alt='reddit logo'
                     height={'30px'}
                 ></Image>
                 <Image
-                    src="/images/redditText.svg"
-                    alt="reddit image title"
+                    src='/images/redditText.svg'
+                    alt='reddit image title'
                     height={'46px'}
                     display={{ base: 'none', md: 'unset' }}
                 ></Image>

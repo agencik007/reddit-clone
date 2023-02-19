@@ -3,12 +3,12 @@ import { Button, Flex, Image } from '@chakra-ui/react';
 
 const OAuthButtons: React.FC = () => {
     return (
-        <Flex direction="column" width="100%" mb={4}>
-            <Button variant="oauth" mb={2}>
-                <Image src="/images/googlelogo.png" height="20px" mr={4} />
+        <Flex direction='column' width='100%' mb={4}>
+            <Button variant='oauth' mb={2}>
+                <Image src='/images/googlelogo.png' height='20px' mr={4} alt='google logo'/>
                 Continue with Google
             </Button>
-            <Button variant="oauth">Some Other Provider</Button>
+            <Button variant='oauth'>Some Other Provider</Button>
         </Flex>
     );
 };

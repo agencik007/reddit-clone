@@ -11,7 +11,7 @@ const RightContent: React.FC = () => {
     return (
         <>
             <AuthModal />
-            <Flex justify="center" align="center">
+            <Flex justify='center' align='center'>
                 <AuthButtons />
             </Flex>
         </>

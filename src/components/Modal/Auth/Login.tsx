@@ -12,6 +12,7 @@ const Login: React.FC<LoginProps> = () => {
 		password: '',
 	});
 
+	// Firebase logic
 	const onSubmit = () => {};
 
 	const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {

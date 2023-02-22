@@ -5,6 +5,7 @@ import RightContent from './RightContetnt/RightContent';
 import SearchInput from './SearchInput';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '@/firebase/clientApp';
+import Directory from './Directory/Directory';
 
 const Navbar: React.FC = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -28,9 +29,9 @@ const Navbar: React.FC = () => {
                     display={{ base: 'none', md: 'unset' }}
                 ></Image>
             </Flex>
-            {/* <Directory /> */}
+            <Directory />
             <SearchInput />
-            <RightContent user={user}/>
+            <RightContent user={user} />
         </Flex>
     );
 };

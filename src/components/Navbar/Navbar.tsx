@@ -15,8 +15,9 @@ const Navbar: React.FC = () => {
             bg='white'
             height='44px'
             padding='6px 12px'
+            justify={{ md: 'space-between' }}
         >
-            <Flex align='center'>
+            <Flex align='center' width={{ base: '40px', md: 'auto' }} mr={{ base: 0, md: 2 }}>
                 <Image
                     src='/images/redditFace.svg'
                     alt='reddit logo'
@@ -29,8 +30,8 @@ const Navbar: React.FC = () => {
                     display={{ base: 'none', md: 'unset' }}
                 ></Image>
             </Flex>
-            <Directory />
-            <SearchInput />
+            {user && <Directory />}
+            <SearchInput user={user} />
             <RightContent user={user} />
         </Flex>
     );

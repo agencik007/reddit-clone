@@ -3,6 +3,7 @@ import { Menu, MenuButton, MenuList } from '@chakra-ui/menu';
 import { Flex, Icon, Text } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import { TiHome } from 'react-icons/ti';
+import Communities from './Communities';
 
 const Directory: React.FC = () => {
     return (
@@ -20,8 +21,7 @@ const Directory: React.FC = () => {
                 </Flex>
             </MenuButton>
             <MenuList>
-                {/*<Communities />*/}
-                Communities
+                <Communities />
             </MenuList>
         </Menu>
     );

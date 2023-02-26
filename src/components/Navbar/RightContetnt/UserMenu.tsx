@@ -27,9 +27,10 @@ const UserMenu: React.FC<UserMenuProps> = ({ user }) => {
                         {user ? (
                             <>
                                 <Icon fontSize={24} mr={1} color='gray.300' as={FaRedditSquare} />
-                                <Flex direction='column' display={{ base: 'none', lg: 'flex'}} fontSize='8pt' align='flex-start' mr={8}>
+                                <Flex direction='column' display={{ base: 'none', lg: 'flex' }} fontSize='8pt'
+                                      align='flex-start' mr={8}>
                                     <Text fontWeight={700}>
-                                        {user?.displayName || user.email?.split("@")[0]}
+                                        {user?.displayName || user.email?.split('@')[0]}
                                     </Text>
                                     <Flex>
                                         <Icon as={IoSparkles} color='brand.100' mr={1} />

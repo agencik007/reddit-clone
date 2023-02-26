@@ -25,10 +25,7 @@ type CreateCommunityModalProps = {
     handleClose: () => void;
 };
 
-const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
-                                                                       open,
-                                                                       handleClose,
-                                                                   }) => {
+const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({ open, handleClose }) => {
     const [communityName, setCommunityName] = useState('');
     const [charsRemaining, setCharsRemaining] = useState(21);
     const [communityType, setCommunityType] = useState('public');
@@ -47,7 +44,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
 
     return (
         <>
-            <Modal isOpen={open} onClose={handleClose}>
+            <Modal isOpen={open} onClose={handleClose} size='lg'>
                 <ModalOverlay />
                 <ModalContent>
                     <ModalHeader
@@ -114,7 +111,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
                                                 color='gray.500'
                                                 mr={2}
                                             />
-                                            <Text fontSize='10pt' mr={1}>
+                                            <Text fontSize='10pt' mr={1} width='65px'>
                                                 Public
                                             </Text>
                                             <Text
@@ -139,7 +136,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
                                                 color='gray.500'
                                                 mr={2}
                                             />
-                                            <Text fontSize='10pt' mr={1}>
+                                            <Text fontSize='10pt' mr={1} width='65px'>
                                                 Restricted
                                             </Text>
                                             <Text
@@ -162,7 +159,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
                                                 color='gray.500'
                                                 mr={2}
                                             />
-                                            <Text fontSize='10pt' mr={1}>
+                                            <Text fontSize='10pt' mr={1} width='65px'>
                                                 Private
                                             </Text>
                                             <Text
@@ -178,11 +175,12 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
                             </Box>
                         </ModalBody>
                     </Box>
-                    <ModalFooter>
-                        <Button colorScheme='blue' mr={3} onClick={handleClose}>
-                            Close
+                    <ModalFooter bg='gray.100' borderRadius='0px 0px 10px 10px'>
+                        <Button variant='outline' height='30px' mr={3} onClick={handleClose}>
+                            Cancel
                         </Button>
-                        <Button variant='ghost'>Secondary Action</Button>
+                        <Button height='30px' onClick={() => {
+                        }}>Create Community</Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>

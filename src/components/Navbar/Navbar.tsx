@@ -9,6 +9,7 @@ import Directory from './Directory/Directory';
 
 const Navbar: React.FC = () => {
     const [user, loading, error] = useAuthState(auth);
+
     return (
         <Flex
             className={openSans.className}

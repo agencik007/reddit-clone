@@ -1,7 +1,7 @@
 import React from 'react';
 import { Menu, MenuButton, MenuList } from '@chakra-ui/menu';
 import { ChevronDownIcon } from '@chakra-ui/icons';
-import { Flex, Icon, MenuItem, Text } from '@chakra-ui/react';
+import { Flex, Icon, Image, MenuItem, Text } from '@chakra-ui/react';
 import { signOut, User } from '@firebase/auth';
 import { CgProfile } from 'react-icons/cg';
 import { FaRedditSquare } from 'react-icons/fa';
@@ -26,7 +26,12 @@ const UserMenu: React.FC<UserMenuProps> = ({ user }) => {
                     <Flex align='center'>
                         {user ? (
                             <>
-                                <Icon fontSize={24} mr={1} color='gray.300' as={FaRedditSquare} />
+                                {user.photoURL ? (
+                                    <Image src={user.photoURL} alt='user profile photo' borderRadius='full'
+                                           boxSize='30px' mr={2} />
+                                ) : (
+                                    <Icon fontSize={24} mr={1} color='gray.300' as={FaRedditSquare} />
+                                )}
                                 <Flex direction='column' display={{ base: 'none', lg: 'flex' }} fontSize='8pt'
                                       align='flex-start' mr={8}>
                                     <Text fontWeight={700}>

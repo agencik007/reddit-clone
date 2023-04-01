@@ -7,8 +7,7 @@ interface PageContentLayoutProps {
 
 // Assumes array of two children are passed
 const PageContentLayout: React.FC<PageContentLayoutProps> = ({
-    children,
-    maxWidth,
+    maxWidth
 }) => {
     return (
         <Flex justify="center" p="16px 0px">

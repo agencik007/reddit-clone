@@ -2,12 +2,14 @@ import React from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 
 interface PageContentLayoutProps {
+    children: any;
     maxWidth?: string;
 }
 
 // Assumes array of two children are passed
 const PageContentLayout: React.FC<PageContentLayoutProps> = ({
-    maxWidth
+    children,
+    maxWidth,
 }) => {
     return (
         <Flex justify="center" p="16px 0px">
